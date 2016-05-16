@@ -1,13 +1,5 @@
-
-# coding: utf-8
-
-# In[1]:
-
 import numpy as np
-
-
-# In[11]:
-
+import types
 class Fatrix():
     """ 
     Using the matrix relations, make a computational graph.
@@ -18,14 +10,12 @@ class Fatrix():
     #all funcs need a _call method.
     #and recieve only one input argument.
     """
-    def __init__(self,shape = None,functions = None,dtype = None):
+    def __init__(self,shape = None,functions = None):
 
         self.func = functions
         self.shape = shape
-        self.dtype = dtype
         
-        if shape != None:
-            self.func = np.empty(shape,dtype)
+        self.func = np.empty(shape,types.FunctionType)
         
         self.make()
         
@@ -51,15 +41,17 @@ class Fatrix():
         return self.func[i]
     
     def __str__(self):
+        """
+        This needs to be a pretty method.
+        Half the point of doing this is to gain more insight into the structure of
+        the computational graph by view the computational graph as a matrix.
+        So we need nice visuals"""
         string = ''
         for i in range(self.shape[0]):
             for j in range(self.shape[1]):
                 string += self.func[i,j].__name__ + ' '
             string += '\n'
         return string
-
-
-# In[3]:
 
 def Fdot(x,y):
     """
@@ -93,36 +85,3 @@ def Fdot(x,y):
                 z[k,j] += x[k,i](y[i,j])
                 
     return z
-
-
-# In[5]:
-
-if __name__ == "__main__":
-    # Some toy functions
-    def A(x): return x
-    def B(x): return 3*x
-    def C(x): return 7*x
-    
-    fatter = Fatrix((3,3))
-    fatter[0,0] = A
-    fatter[1,1] = B
-    fatter[2,2] = C
-    
-    x = np.diag(np.ones(3))
-    print(fatter)
-    print(fatter(x))
-
-
-# In[ ]:
-
-if __name__ == "__main__":
-    def D(x): return 11*x
-    
-    print(fat+fat1)
-
-
-# In[10]:
-
-if __name__ == '__main__':
-    get_ipython().system('jupyter nbconvert --to script Simple2D.ipynb ')
-
