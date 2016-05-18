@@ -29,3 +29,4 @@ The motivation being that when you look at the fatrixes of common neural network
 ### Want
 * Implementation in other languages? (Haskell, ??)
 * Make some pretty pics to help people understand
+* A nice way to work with derivatives??
