@@ -4,9 +4,17 @@ Functional Arrays and Tensors.
 Fatrix: a matrix of functions.
 Fensor: a tensor of functions.
 
-Goal: To design a framework for thinking about networks/graphs as structured arrays.
-Why: To have a formal toolset for understanding structure in networks. To help answer the question of how structure and function are related.
-What: An extension of numpy libraries (ndarrays) to allow a functional type of linear algebra on matricies/tensors. 
+### Goals;
+* To design a framework for thinking about networks/graphs as structured arrays.
+### Why;
+* To have a formal toolset for understanding high level structure in networks. 
+* To help answer how structure is related to function.
+* To understand weight tying in neural networks.
+* ??
+
+### What;
+* An extension of numpy libraries (ndarrays) to allow a functional type of linear algebra on matricies/tensors. 
+* Functional programming with arrays.
 
     Traditional dot
     a, b  .  e,  f   =  a.e + b.g, a.f + b.h
@@ -33,6 +41,7 @@ Potential applications
     * RNNs
     * Resnets
     * Ladder nets
+    * Recursive nets
     * ???
 
 ### Want
