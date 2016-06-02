@@ -100,6 +100,7 @@ def Fdot(x,y):
     for k in range(n):#for each row of x
         for j in range(p): #for each column of y
             for i in range(m): #for each column of x and row of y
+                print(x[k,i](y[i,j]).shape)
                 z[k,j] += x[k,i](y[i,j])
                 
     return z
