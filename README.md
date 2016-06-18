@@ -5,46 +5,38 @@ Fatrix: a matrix of functions.
 Fensor: a tensor of functions.
 
 ### Goals;
-* To design a framework for thinking about networks/graphs as structured arrays.
+* A way of thinking about networks/graphs as structured functions (or functional arrays).
+
 ### Why;
-* To have a formal toolset for understanding high level structure in networks. 
+* A toolset for understanding high level structure in networks. 
 * To help answer how structure is related to function.
-* To understand weight tying in neural networks.
-* ??
 
 ### What;
-* An extension of numpy libraries (ndarrays) to allow a functional type of linear algebra on matricies/tensors. 
 * Functional programming with arrays.
 
     Traditional dot
     a, b  .  e,  f   =  a.e + b.g, a.f + b.h
     c, d     g,  h   =  c.e + d.g, c.f + d.h
-    Fdot
+    Functional dot
     a, b  .  e,  f   =  a(e) + b(g), a(f) + b(h)
     c, d     g,  h   =  c(e) + d(g), c(f) + d(h)
     
-Potential applications
-* Engineering: Can be used to easily build computational graphs (e.g. in tensorflow).
-* Science: The structure of common neural network, like CNNs, RNNs, ResNets, show some interesting patterns when represented with FAT. See [this](https://github.com/act65/FAT/blob/master/Modular%20nets.ipynb) for some examples.
-* Math: ?? how does this contribute to math literature? See [this]() for a formal definition of the langauge.
-
+Potential uses
+* Could be used to easily build computational graphs (e.g. in tensorflow).
+* The structure of common neural network, like CNNs, RNNs, ResNets, show some interesting patterns when represented with FAT. See [this]() for some examples.
+* ?? 
 
 # To-do
 ### Need
 * Decide on and define algebra on fatrixes
-    * Composition
-    * ??
-* Generalise to tensors
 * Formulate the problem it is solving, make sure this is well motivated
 * Make working examples for well known/interesting architectures
-    * CNNs
-    * RNNs
-    * Resnets
-    * Ladder nets
     * Recursive nets
-    * ???
+    * LSTMs
+    * ??
 
 ### Want
-* Implementation in other languages? (Haskell, ??)
+* Implementation in python
 * Make some pretty pics to help people understand
-* A nice way to work with derivatives??
+* Investigate a nice way to work with derivatives??
+* Generalise to tensors (why?)
