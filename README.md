@@ -22,7 +22,7 @@ A slight modification to matrix algebra.
     
 Potential uses?
 * Could be used to easily build computational graphs (e.g. in tensorflow).
-* The structure of common neural network, like CNNs, RNNs, ResNets, show some interesting patterns when represented with FAT. See [this](https://github.com/act65/FAT/tree/master/_Examples) for some examples.
+* The structure of common neural network, like CNNs, RNNs, ResNets, show some interesting patterns when represented with FAT. See [this](https://github.com/act65/FAT/tree/master/Examples) for some examples.
 * ?? 
 
 # To-do
