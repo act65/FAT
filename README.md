@@ -4,15 +4,14 @@ Functional Arrays and Tensors.
 Fatrix: a matrix of functions.
 Fensor: a tensor of functions.
 
-### Goals;
-* A way of thinking about networks/graphs as structured functions (or functional arrays).
+### Goals
+A way of thinking about networks/graphs as structured functions (or functional arrays).
 
-### Why;
-* A toolset for understanding high level structure in networks. 
-* To help answer how structure is related to function.
+### Why
+A toolset for understanding high level structure in networks. 
 
-### What;
-* Functional programming with arrays.
+### What
+A slight modification to matrix algebra.
 
     Traditional dot
     a, b  .  e,  f   =  a.e + b.g, a.f + b.h
@@ -21,9 +20,9 @@ Fensor: a tensor of functions.
     a, b  .  e,  f   =  a(e) + b(g), a(f) + b(h)
     c, d     g,  h   =  c(e) + d(g), c(f) + d(h)
     
-Potential uses
+Potential uses?
 * Could be used to easily build computational graphs (e.g. in tensorflow).
-* The structure of common neural network, like CNNs, RNNs, ResNets, show some interesting patterns when represented with FAT. See [this]() for some examples.
+* The structure of common neural network, like CNNs, RNNs, ResNets, show some interesting patterns when represented with FAT. See [this](https://github.com/act65/FAT/blob/master/Examples.ipynb) for some examples.
 * ?? 
 
 # To-do
