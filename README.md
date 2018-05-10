@@ -1,4 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/act65/FAT.png?label=ready&title=Ready)](https://waffle.io/act65/FAT)
 # FAT
 
 Functional Arrays and Tensors. 
