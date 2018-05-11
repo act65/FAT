@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Gradient descent example</title>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async>
+</script>
+</head>
+<body>
+<h1>
+  Gradient descent (with momentum)
+</h1>
+<p>
+  $$
+  \begin{align}
+  m_{t+1} &= \nabla f(x_t) + \alpha m_t \tag{momentum}\\
+  x_{t+1} &= x_t - \eta m_t \tag{gradient descent update}\\
+  \end{align}
+  $$
+  $$
+  \begin{bmatrix}
+  \alpha & \nabla f \\
+  \eta & I \\
+  \end{bmatrix}
+  \left( \begin{array}{c} m_t \\ x_t \end{array} \right) \tag{FAT representation}\\
+  $$
+  <!-- Kinda, not really possible to use m_t+1 to update x_t+1. -->
+</p>
+</body>
+</html>
