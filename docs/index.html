@@ -4,46 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>MathJax example</title>
-
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async>
 </script>
 </head>
 <body>
 <p>
-  Let $e_i$ be the ith encoder layer and $d_j$ be the (N-j)th decoder layer.
-  Let $x_i$ be the ith encoder activation, and $y_j$ be the (N-j)th decoder activation.
-
-
-  $$
-  \begin{align}
-  x_{i+1}  = e_i(x_{i}) \tag{for e in the set of encoder functions} \\
-  y_{i+1}  = y_i + d_i(y_{i}) \tag{for d in the set of decoder functions} \\
-  \left[ \begin{array}{c} x_1 \\ x_2 \\ x_3 \\ y_1 \\ y_2 \\ y_3  \\ \end{array} \right]  =
-  \left[ \begin{array}{c} x_1 \\ e_1(x_1) \\ e_2(x_2) \\ x_3 \\ x_2 + d_1(y_1) \\ x_1 + d_2(y_2) \\  \end{array} \right] \\
-  \end{align}
-  $$
-
-  $$
-  \begin{align}
-   = \begin{bmatrix}
-  I & 0 & 0 &  0 & 0 & 0 \\
-  e_1 & 0 & 0  & 0 & 0 & 0\\
-  0 & e_2 & 0  & 0 & 0 & 0\\
-  0 & 0 & e_3 & 0 & 0 & 0 \\
-  0 & 0 & I &  d_1 & 0 & 0\\
-  0 & I & 0 & 0 & d_2 & 0\\
-  \end{bmatrix}
-  \left( \begin{array}{c}  x_1 \\ x_2 \\ x_3 \\ y_1 \\ y_2 \\ y_3  \\ \end{array} \right) \tag{rewrite using FATs} \\
-  = \begin{bmatrix}
-  I & 0 & 0 &  0 & 0 & 0\\
-  e_1 & 0 & 0  & 0 & 0 & 0\\
-  0 & e_2 & 0  & 0 & 0 & 0\\
-  0 & 0 & e_3 & 0 & 0 & 0\\
-  0 & e_2 & 0 &  d_1 & 0 & 0 \\
-  e_1 & 0 & 0 & 0 & d_2 & 0 \\
-  \end{bmatrix}
-  \left( \begin{array}{c}  x_1 \\ x_2 \\ x_3 \\ y_1 \\ y_2 \\ y_3  \\ \end{array} \right)  \tag{rewrite w.r.t fns} \\
-  \end{align}
-  $$
+  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+  $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 </p>
 </body>
 </html>
