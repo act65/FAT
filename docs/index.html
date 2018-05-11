@@ -15,16 +15,16 @@
 
   $$
   \begin{align}
-  x_{i+1} &= e_i(x_{i}) \tag{for e in the set of encoder functions} \\
-  y_{i+1} &= y_i + d_i(y_{i}) \tag{for d in the set of decoder functions} \\
-  \left[ \begin{array}{c} x_1 \\ x_2 \\ x_3 \\ y_1 \\ y_2 \\ y_3  \\ \end{array} \right] &=
+  x_{i+1}  = e_i(x_{i}) \tag{for e in the set of encoder functions} \\
+  y_{i+1}  = y_i + d_i(y_{i}) \tag{for d in the set of decoder functions} \\
+  \left[ \begin{array}{c} x_1 \\ x_2 \\ x_3 \\ y_1 \\ y_2 \\ y_3  \\ \end{array} \right]  =
   \left[ \begin{array}{c} x_1 \\ e_1(x_1) \\ e_2(x_2) \\ x_3 \\ x_2 + d_1(y_1) \\ x_1 + d_2(y_2) \\  \end{array} \right] \\
   \end{align}
   $$
 
   $$
   \begin{align}
-  &= \begin{bmatrix}
+   = \begin{bmatrix}
   I & 0 & 0 &  0 & 0 & 0 \\
   e_1 & 0 & 0  & 0 & 0 & 0\\
   0 & e_2 & 0  & 0 & 0 & 0\\
@@ -33,7 +33,7 @@
   0 & I & 0 & 0 & d_2 & 0\\
   \end{bmatrix}
   \left( \begin{array}{c}  x_1 \\ x_2 \\ x_3 \\ y_1 \\ y_2 \\ y_3  \\ \end{array} \right) \tag{rewrite using FATs} \\
-  &= \begin{bmatrix}
+  = \begin{bmatrix}
   I & 0 & 0 &  0 & 0 & 0\\
   e_1 & 0 & 0  & 0 & 0 & 0\\
   0 & e_2 & 0  & 0 & 0 & 0\\
